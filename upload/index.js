@@ -65,3 +65,12 @@ app.listen(4040,"localhost",()=>{
 })
 
 
+
+
+
+// deployment access & compression data   (servers)
+const cors =require("cors");
+app.use(cors());
+// compress all response 
+const compression = require("compression");
+app.use(compression());
