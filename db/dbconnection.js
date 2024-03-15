@@ -1,6 +1,8 @@
 const mysql = require("mysql");
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
+    connectionLimit:3,
+    waitForConnections:true,
     host:"bqhpcjftgwisqapagnsv-mysql.services.clever-cloud.com",
     user:"ujkadrg2qwqh9jho",
     password:"vJ5IwW3G9NGNiMWA4pUf",
@@ -9,7 +11,7 @@ const connection = mysql.createConnection({
 
 })
 
-connection.connect((err)=>{
+connection.getConnection((err,connection)=>{
     if(err)
     {
         throw err ;
