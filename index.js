@@ -59,18 +59,8 @@ app.use("/sendmsgs",sendmsgs);
 app.use("/uploadimgP",uploadimgP);
 app.use("/uploadimgS",uploadimgS)
 //======== run the app ============//
-app.listen(4040,"localhost",()=>{
+app.listen(4040,()=>{
 
     console.log("SERVER IS RUNNING....");
 })
 
-
-
-
-
-// deployment access & compression data   (servers)
-const cors =require("cors");
-app.use(cors());
-// compress all response 
-const compression = require("compression");
-app.use(compression());
