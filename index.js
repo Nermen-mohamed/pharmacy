@@ -64,3 +64,7 @@ app.listen(4040,()=>{
     console.log("SERVER IS RUNNING....");
 })
 
+
+app.get("/test",async(req,res) => {
+    res.status(200).send("server is running succesfully")
+})
