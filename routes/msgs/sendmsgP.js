@@ -11,7 +11,7 @@ router.post("/:id",patient,async(req,res)=>{
     try
     {
         const query = util.promisify(connection.query).bind(connection);
-        const chat = await query ("select * from chat where id = ?", req.params.id);
+        const chat = await query ("select * from chats where id = ?", req.params.id);
         const user = await query ("select * from user where id =?",chat[0].patientid)
         if(chat[0])
         {
