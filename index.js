@@ -38,6 +38,17 @@ const sendmsgP = require("./routes/msgs/sendmsgP");
 const sendmsgs = require("./routes/msgs/sendmsgS");
 const uploadimgP = require("./routes/msgs/uploadpicP");
 const uploadimgS = require("./routes/msgs/uploadimgS");
+//========== product functions =======//
+const createptoduct = require("./routes/products/productCreate");
+const getproducts = require("./routes/products/getallproducts");
+const getproductbycategory = require("./routes/products/getproductbycategory");
+//========== order function =========//
+const createorder = require("./routes/order/createorder");
+const getorders = require("./routes/order/getorders");
+const acceptorder = require("./routes/order/acceptorder");
+const rejectorder = require("./routes/order/rejectorder");
+//=========== carts ==========//
+const getcarts = require("./routes/carts/getcarts");
 
 // ======== use routes ===========//
 app.use("/register",register);
@@ -57,7 +68,15 @@ app.use("/deletechat",deletechat);
 app.use("/sendmsgP",sendmsgP);
 app.use("/sendmsgs",sendmsgs);
 app.use("/uploadimgP",uploadimgP);
-app.use("/uploadimgS",uploadimgS)
+app.use("/uploadimgS",uploadimgS);
+app.use("/createptoduct",createptoduct);
+app.use("/getproducts",getproducts);
+app.use("/getproductbycategory",getproductbycategory);
+app.use("/createorder",createorder);
+app.use("/getorders",getorders);
+app.use("/acceptorder",acceptorder);
+app.use("/rejectorder",rejectorder);
+app.use("/getcarts",getcarts);
 //======== run the app ============//
 app.listen(4040,()=>{
 
