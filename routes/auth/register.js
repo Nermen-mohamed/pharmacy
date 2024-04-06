@@ -8,7 +8,7 @@ const crypto = require("crypto");
 // api -> http://localhost:4040/register
 //======== registration ==========//
 router.post(
-  "/",
+  "/register",
   body("name").isString().withMessage("please enter valid name"),
   body("email"),
   body("password"),

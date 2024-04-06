@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pharmacy -Products</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="css/nice-select.css">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="css/icofont.css">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="css/slicknav.min.css">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="css/owl-carousel.css">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" href="css/datepicker.css">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- Favicon -->
+        <link rel="icon" href="img/fav.png">
+    <style>
+body{
+    font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size:18px;
+	color:#333333;
+}
+.header{
+	background-color:#fff;
+	position:relative;
+}
+.header .navbar-collapse{
+	padding:0;
+}
+
+.header .top-link li{
+	display:inline-block;
+	margin-right:15px;
+}
+.header .top-link li:last-child{
+	margin-right:0px;
+}
+.header .top-link li a{
+	color:#2C2D3F;
+	font-size:14px;
+	font-weight:400;
+    
+}
+.header .top-link li:hover a{
+	color:#045c85;
+}
+.header .top-contact{
+	float:right;
+}
+.header .top-contact li{
+	display:inline-block;
+	margin-right:25px;
+	color:#2C2D3F;
+}
+.header .top-contact li:last-child{
+	margin-right:0;
+}
+.header .top-contact li a{
+	font-size:14px;
+}
+.header .top-contact li a:hover{
+	color:#045c85;
+}
+.header .top-contact li i{
+	color:#045c85;
+	margin-right:8px;
+}
+.header .header-inner {
+	background:#fff;
+	z-index:1500;
+	width:100%;
+}
+.get-quote{
+	margin-top:12px;
+}
+.get-quote .btn{
+	color:#ffffff;
+}
+.header .logo {
+	float: left;
+	margin-top: 15px;
+}
+.header .navbar {
+	background: none;
+	box-shadow: none;
+	border: none;
+	margin: 0;
+	height: 0px;
+	min-height: 0px;
+}
+.header .nav li{
+	margin-right: 15px;
+    float: left;
+	position:relative;
+}
+.header .nav li:last-child{
+	margin:0;
+}
+.header .nav li a {
+	color: #2C2D3F;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: capitalize;
+	padding: 25px 12px;
+	position: relative;
+	display: inline-block;
+	position:relative;
+}
+.header .nav li a::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width:0%;
+	background: #045c85;
+	border-radius: 5px 5px 0 0;
+	opacity:0;
+	visibility:hidden;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+}
+.header .nav li.active a:before{
+	opacity:1;
+	visibility:visible;
+	width: 100%;
+}
+.header .nav li.active a{
+	color:#045c85;
+}
+.header .nav li:hover a:before{
+	opacity:1;
+	width: 100%;
+	visibility:visible;
+}
+.header .nav li:hover a{
+	color:#045c85;
+}
+.header .nav li a i {
+	display: inline-block;
+	margin-left: 1px;
+	font-size: 13px;
+}
+/* Middle Header */
+.header.style2 .header-inner {
+	border-top: 1px solid #eee;
+}
+.header.style2 .logo {
+	margin-top:6px;
+}
+.header .middle-header {
+	background: #fff;
+	padding: 20px 0px;
+}
+.header .widget-main{
+	float:right;
+}
+.header.style2 .get-quote {
+	margin-top: 0;
+}
+.header .single-widget {
+	position: relative;
+	float: left;
+	margin-right: 30px;
+	padding-left: 55px;
+}
+.header .single-widget:last-child{
+	margin:0;
+}
+.header .single-widget .logo{
+	margin:0;
+	padding:0;
+	margin-top: 7px;
+}
+.header .single-widget i {
+	position: absolute;
+	left: 0;
+	top: 6px;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	color: #fff;
+	background: #045c85;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 15px;
+}
+.header .single-widget h4 {
+	font-size: 15px;
+	font-weight: 500;
+}
+.header .single-widget p {
+	margin-bottom: 5px;
+	text-transform: capitalize;
+}
+.header .single-widget.btn{
+	margin-left:0;
+}
+/* Dropdown Menu */
+.header .nav li .dropdown {
+	background: #fff;
+	width: 220px;
+	position: absolute;
+	left:-20px;
+	top: 100%;
+	z-index: 2000;
+	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 3px 5px #3333334d;
+	transform-origin: 0 0 0;
+	transform: scaleY(0.2);
+	-webkit-transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	opacity: 0;
+	visibility: hidden;
+	top: 74px;
+	border-left:3px solid #2889e4;
+}
+.header .nav li:hover .dropdown{
+	opacity:1;
+	visibility:visible;
+	transform:translateY(0px);
+}
+.header .nav li .dropdown li{
+	float:none;
+	margin:0;
+	border-bottom:1px dashed #eee;
+}
+.header .nav li .dropdown li:last-child{
+	border:none;
+}
+.header .nav li .dropdown li a {
+	padding: 12px 15px;
+	color: #666;
+	display: block;
+	font-weight: 400;
+	text-transform: capitalize;
+	background: transparent;
+	-webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+	transition:all 0.2s ease;
+}
+.header .nav li .dropdown li a:before{
+	display:none;
+}
+.header .nav li .dropdown li:last-child a{
+	border-bottom:0px;
+}
+.header .nav li .dropdown li:hover a{
+	color:#045c85;
+}
+.header .nav li .dropdown li a:hover{
+	border-color:transparent;
+}
+
+/* Header Sticky */
+.header.sticky .header-inner{
+	position:fixed;
+	z-index:300000;
+	top:0;
+	left:0;
+	bottom:initial;
+	-webkit-transition:all 0.4s ease;
+	-moz-transition:all 0.4s ease;
+	transition:all 0.4s ease;
+	animation: fadeInDown 0.5s both 0.1s;
+	box-shadow:0px 0px 13px #00000054;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        .product-categories {
+            margin-bottom: 30px;
+        }
+
+        .product-categories h2 {
+            margin-bottom: 15px;
+        }
+
+        .product-categories ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-categories li {
+            cursor: pointer;
+            padding: 10px 0;
+        }
+
+        .product-categories li.active {
+            font-weight: bold;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .product .price {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .product button {
+            width:185px ;
+            height: 33px;
+            margin-left: 15px;
+            background-color:#045c85;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button.added {
+            background-color:rgb(77, 128, 77);
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            z-index: 9999;
+            display: none;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            text-align: center;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .modal-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .modal-content .price {
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .modal-content button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .modal-content button:hover {
+            background-color: #218838;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        
+        @media (max-width: 576px) {
+            .products {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+        @media (min-width: 768px) {
+            .products {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" >
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="index.html"><img src="images/logo.png" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-7 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li class="active"><a href="index.html">Home<i class="icofont-rounded-down"></i></a>
+												<ul class="dropdown">
+													<li><a href="Products.html">All Products</a></li>
+												</ul>
+											</li>
+											<li><a href="AboutUs.html">About us</a></li>
+											<li><a href="contact.html">Contact</a></li>
+											<li>						<div class="search-container">
+												<input type="text" class="search-input" style="margin-top: 16px; width: 300px;height:45px;border-radius: 13px; float: left;" placeholder="  Search for product">
+											</div></li>
+										</ul>
+									</div>
+									</nav>
+								<!--/ End Main Menu -->
+							</div>
+							<div class="col-lg-2 col-12">
+								<div class="get-quote" style="width: 200px;">
+									<a href="Login.html" class="btn">Register</a>
+									<!-- <a href="Cart.html"><i class="fa-solid fa-cart-shopping" style="font-size: 22px;padding-left: 10px ;color: rgb(18, 61, 121);cursor: pointer;"></i>&nbsp; Cart</a> -->
+									<a href="Cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"style="font-size: 30px;padding-left: 10px ;color: rgb(18, 61, 121);cursor: pointer;"></i>&nbsp; Cart</a>
+									<!-- <i class="fas fa-shopping-cart" style="font-size: 25px;padding-left: 10px;color: rgb(21, 121, 171);cursor: pointer;"></i>
+									<i class="far fa-heart" style=" font-size: 25px; padding-left: 10px; color: rgb(0, 199, 143);cursor: pointer;"></i>-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></header>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-12">
+                    <!-- Product Categories -->
+                    <div class="product-categories">
+                        <h2>Categories</h2>
+                        <ul id="product-categories">
+                            <li class="active" data-filter="all">All</li>
+                            <li data-filter="Medicine">Medicine</li>
+                            <li data-filter="Make up">Make up</li>
+                            <li data-filter="Skincare Product">Skincare Product</li>
+                            <li data-filter="Men Product">Men Product</li>
+                            <li data-filter="Hair Product">Hair Product</li>
+                            <li data-filter="Baby Essentials">Baby Essentials</li>
+
+                        </ul>
+                    </div>
+                    <!--/ End Product Categories -->
+                </div>
+                <div class="col-lg-9 col-md-9 col-12">
+                    <!-- Products List -->
+                    <div class="products-list">
+                        <h2>Our Products</h2>
+                        <div class="products" id="products">
+                            <!-- Products will be dynamically added here using JavaScript -->
+                        </div>
+                    </div>
+                    <!--/ End Products List -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlay for modal -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <a href="product_detailes.html" id="modalLink" target="_blank"><img src="" id="modalImage" alt=""></a>
+            <h2 id="modalName"></h2>
+            <p id="modalDescription"></p>
+            <p class="price" id="modalPrice"></p>
+            <button id="modalBtn">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Sample Product Data 
+        const productsData = [
+            {
+                id: 1,
+                name: "Dolipran",
+                category: "Medicine",
+                image: "images/333.jpg",
+                description: "description",
+                price: "19 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 2,
+                name: "B-cor",
+                category: "Medicine",
+                image: "images/1.jpg",
+                description: "description",
+                price: "19 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 3,
+                name: "Cataflam",
+                category: "Medicine",
+                image: "images/7.jpeg",
+                description: "description",
+                price: "19 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 4,
+                name: "Nuzartan",
+                category: "Medicine",
+                image: "images/4.jpg",
+                description: "description",
+                price: "19 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 5,
+                name: "Diltiazem",
+                category: "Medicine",
+                image: "images/3.jpg",
+                description: "description",
+                price: "19 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 6,
+                name: "Catafast",
+                category: "Medicine",
+                image: "images/8.jpg",
+                description: "description",
+                price: "19 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 7,
+                name: "Maybelline",
+                category: "Make up",
+                image: "images/88.jpg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 8,
+                name: "Foundation",
+                category: "Make up",
+                image: "images/cc.jpg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 9,
+                name: "Rare Beauty",
+                category: "Make up",
+                image: "images/d.jpg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 10,
+                name: "La Roche Posay",
+                category: "Skincare Product",
+                image: "images/p.jpg",
+                description: "description",
+                price: "14 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 11,
+                name: "Clean&Clear",
+                category: "Skincare Product",
+                image: "images/11.png",
+                description: "description",
+                price: "14 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 12,
+                name: "Vichy",
+                category: "Skincare Product",
+                image: "images/33.png",
+                description: "description",
+                price: "14 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 13,
+                name: "North For Men",
+                category: "Men Product",
+                image: "images/6.jpeg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 14,
+                name: "Marbele",
+                category: "Men Product",
+                image: "images/9.jpeg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 15,
+                name: "Hair Remover",
+                category: "Men Product",
+                image: "images/101.jpg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 16,
+                name: "Shampoo",
+                category: "Hair Product",
+                image: "images/55.png",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 17,
+                name: "Bless",
+                category: "Hair Product",
+                image: "images/555.jpg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 18,
+                name: "Clary",
+                category: "Hair Product",
+                image: "images/b.jpg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+
+            {
+                id: 19,
+                name: "Sanosan",
+                category: "Baby Essentials",
+                image: "images/77.png",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 20,
+                name: "Gohnsons",
+                category: "Baby Essentials",
+                image: "images/5.jpg",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+            {
+                id: 21,
+                name: "Sudocream",
+                category: "Baby Essentials",
+                image: "images/88.png",
+                description: "description",
+                price: "24 EGP",
+                website_link: "product_detailes.html"
+            },
+    
+          
+        ];
+
+        // Function to render products
+        function renderProducts(products) {
+            const productsContainer = document.getElementById("products");
+            productsContainer.innerHTML = "";
+            products.forEach(product => {
+                const productCard = `
+                <div class="product" data-id="${product.id}" data-name="${product.name}" data-image="${product.image}" data-description="${product.description}" data-price="${product.price}">
+                    <a href="${product.website_link}" target="_blank"><img src="${product.image}" alt="${product.name}"></a>
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p class="price">${product.price}</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>`;
+                productsContainer.innerHTML += productCard;
+            });
+
+            // Add event listener to "Add to Cart" buttons
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const productId = parseInt(button.parentNode.getAttribute("data-id"));
+                    const selectedProduct = productsData.find(product => product.id === productId);
+                    if (selectedProduct) {
+                        button.textContent = "Added"; // Change button text to "Added"
+                        button.classList.add("added"); // Add 'added' class for styling
+                        button.disabled = true; // Disable button after adding to cart
+                    }
+                });
+            });
+        }
+
+       
+        renderProducts(productsData);
+
+        const categoryItems = document.querySelectorAll("#product-categories li");
+        categoryItems.forEach(item => {
+            item.addEventListener("click", () => {
+                categoryItems.forEach(el => el.classList.remove("active"));
+                item.classList.add("active");
+                const category = item.getAttribute("data-filter");
+                const filteredProducts = category === "all" ? productsData : productsData.filter(product => product.category === category);
+                renderProducts(filteredProducts);
+            });
+        });
+
+      
+        const overlay = document.getElementById("overlay");
+        const modal = document.getElementById("modal");
+        const modalClose = document.querySelector(".close");
+
+        
+function openModal(product) {
+    document.getElementById("modalLink").setAttribute("href", "product_details.html?id=" + product.id);
+    document.getElementById("modalImage").src = product.image;
+    document.getElementById("modalName").textContent = product.name;
+    document.getElementById("modalDescription").textContent = product.description;
+    document.getElementById("modalPrice").textContent = product.price;
+    document.getElementById("modalBtn").setAttribute("data-id", product.id);
+    overlay.style.display = "block";
+    modal.style.display = "block";
+}
+
+
+        function openModal(product) {
+            document.getElementById("modalImage").src = product.image;
+            document.getElementById("modalName").textContent = product.name;
+            document.getElementById("modalDescription").textContent = product.description;
+            document.getElementById("modalPrice").textContent = product.price;
+            document.getElementById("modalBtn").setAttribute("data-id", product.id);
+            overlay.style.display = "block";
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            overlay.style.display = "none";
+            modal.style.display = "none";
+        }
+
+        modalClose.addEventListener("click", closeModal);
+        overlay.addEventListener("click", closeModal);
+
+        // Add event listener to "Add to Cart" button in modal
+        const modalAddToCart = document.getElementById("modalBtn");
+        modalAddToCart.addEventListener("click", () => {
+            const productId = parseInt(modalAddToCart.getAttribute("data-id"));
+            const selectedProduct = productsData.find(product => product.id === productId);
+            if (selectedProduct) {
+                modalAddToCart.textContent = "Added"; 
+                modalAddToCart.classList.add("added"); 
+                modalAddToCart.disabled = true; 
+            }
+        });
+
+    </script>
+</body>
+
+</html>
+
+

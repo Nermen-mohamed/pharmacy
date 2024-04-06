@@ -8,7 +8,7 @@ const crypto = require("crypto");
 // api -> http://localhost:4040/login
 // ========= LOGIN ==============//
 
-router.post("/",body("email").isEmail().withMessage("enter valid email"),
+router.post("/login",body("email").isEmail().withMessage("enter valid email"),
                      body("password"),async (req,res)=>{
     try
     {
