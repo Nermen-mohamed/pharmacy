@@ -8,12 +8,13 @@ const crypto = require("crypto");
 // api -> http://localhost:4040/register
 //======== registration ==========//
 router.post(
-  "/register",
-  body("name").isString().withMessage("please enter valid name"),
-  body("email"),
-  body("password"),
-  body("phone").isNumeric().withMessage("please enter valid number"),
-  body("status"),
+ "/",
+body("name").isString().withMessage("please enter valid name"),
+body("email"),
+body("password"),
+body("phone").isNumeric().withMessage("please enter valid number"),
+body("status"),
+
   async (req, res) => {
     try {
       //=== validation of request
